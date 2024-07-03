@@ -12,6 +12,13 @@ app.use(cors())
 
 const students = JSON.parse(fs.readFileSync(`db.json`))
 
+// Helper function to get the next ID
+const getNextId = () => {
+  if (students.length === 0) return 1
+  const ids = students.map((student) => student.id)
+  return Math.max(...ids) + 1
+}
+
 const getAllStudents = (req, res) => {
   res.status(200).json({
     status: 'success',
@@ -23,7 +30,7 @@ const getAllStudents = (req, res) => {
 }
 
 const getStudent = (req, res) => {
-  const id = req.params.id * 1
+  const id = parseInt(req.params.id, 10)
 
   const student = students.find((student) => student.id === id)
 
@@ -43,7 +50,7 @@ const getStudent = (req, res) => {
 }
 
 const createStudent = (req, res) => {
-  const id = Math.random()
+  const id = getNextId()
   const newStudent = Object.assign({ id }, req.body)
 
   students.push(newStudent)
@@ -59,7 +66,7 @@ const createStudent = (req, res) => {
 }
 
 const updateStudent = (req, res) => {
-  const id = req.params.id * 1
+  const id = parseInt(req.params.id, 10)
   const student = students.find((student) => student.id === id)
 
   if (!student) {
@@ -82,7 +89,7 @@ const updateStudent = (req, res) => {
 }
 
 const deleteStudent = (req, res) => {
-  const id = req.params.id * 1
+  const id = parseInt(req.params.id, 10)
   const studentIndex = students.findIndex((student) => student.id === id)
 
   if (studentIndex === -1) {
