@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "name": "Alice Johnson",
+    "age": 21,
+    "major": "Computer Science",
+    "courses": [
+      { "courseName": "Algorithms", "grade": "A" },
+      { "courseName": "Data Structures", "grade": "B+" }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Bob Smith",
+    "age": 22,
+    "major": "Mathematics",
+    "courses": [
+      { "courseName": "Linear Algebra", "grade": "A-" },
+      { "courseName": "Calculus III", "grade": "B" }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Ali",
+    "age": 20,
+    "major": "Physics",
+    "courses": [
+      { "courseName": "Quantum Mechanics", "grade": "A+" },
+      { "courseName": "Thermodynamics", "grade": "A" }
+    ]
+  },
+  {
+    "id": 4,
+    "name": "David Kim",
+    "age": 23,
+    "major": "Chemistry",
+    "courses": [
+      { "courseName": "Organic Chemistry", "grade": "B+" },
+      { "courseName": "Physical Chemistry", "grade": "A-" }
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Eva Brown",
+    "age": 21,
+    "major": "Biology",
+    "courses": [
+      { "courseName": "Genetics", "grade": "A" },
+      { "courseName": "Microbiology", "grade": "A-" }
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Frank White",
+    "age": 22,
+    "major": "English Literature",
+    "courses": [
+      { "courseName": "Shakespearean Literature", "grade": "B" },
+      { "courseName": "Modernist Literature", "grade": "A" }
+    ]
+  },
+  {
+    "id": 7,
+    "name": "Grace Martinez",
+    "age": 20,
+    "major": "History",
+    "courses": [
+      { "courseName": "Medieval History", "grade": "A-" },
+      { "courseName": "American History", "grade": "B+" }
+    ]
+  }
+]
